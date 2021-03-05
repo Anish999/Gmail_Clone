@@ -28,9 +28,13 @@ function Header() {
 
             <SearchWrapper>
                 <SearchBarWrapper>
-                    <SearchIcon />
+                    <SearchIconWrapper>
+                        <SearchIcon />
+                    </SearchIconWrapper>
                     <input type="text" placeholder="Search mail" />
-                    <ExpandMoreIcon />
+                    <ExpandMoreIconWrapper>
+                        <ExpandMoreIcon />
+                    </ExpandMoreIconWrapper>
                 </SearchBarWrapper>
             </SearchWrapper>
 
@@ -84,6 +88,7 @@ const Wrapper = styled.div`
             height: 45px;
             display: flex;
             align-items:center;
+            cursor: pointer;
 
             img{
                 height: 24px;
@@ -110,7 +115,7 @@ const Wrapper = styled.div`
 
             input {
                 width: 100%;
-                height: 30px;
+                height: auto;
                 background:none;
                 border: none;
                 font-size: 18px;
@@ -120,6 +125,30 @@ const Wrapper = styled.div`
                 }
             }
         `
+            
+            const SearchIconWrapper = styled.div`
+                height: 40px;
+                width: 40px;
+                display: grid;
+                place-items:center;
+                border-radius: 50%;
+
+                :hover {
+                    background-color: rgba(60,64,67,0.08);;
+                }
+            `
+
+            const ExpandMoreIconWrapper = styled.div`
+                height: 40px;
+                width: 40px;
+                display: grid;
+                place-items:center;
+                border-radius: 50%;
+
+                :hover {
+                    background-color: rgba(60,64,67,0.08);;
+                }
+            `
 
     const IconsWrapper = styled.div`
         margin-left: 8px;
