@@ -17,10 +17,12 @@ function Header() {
 
             <LogoWrapper>              
                 <Menu>
-                    <MenuIcon />
+                    <MenuIconWrapper>
+                        <MenuIcon />
+                    </MenuIconWrapper>
                 </Menu>
                 <Logo>
-                    <img src="https://cdn.vox-cdn.com/thumbor/8fWz6qpiMYMsZhY4vrc9Vhl5yL8=/0x110:1320x770/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/21939811/newgmaillogo.jpg" />
+                    <img src="https://logodownload.org/wp-content/uploads/2018/03/gmail-logo-1-1.png" />
                 </Logo>
             </LogoWrapper>
 
@@ -49,7 +51,7 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 270px auto 170px;
     border-bottom: 1px solid lightgray;
-    height:70px;
+    height:64px;
     align-items: center;
 `;
 
@@ -64,12 +66,28 @@ const Wrapper = styled.div`
             place-items: center;
         `
 
+        const MenuIconWrapper = styled.div`
+                height:45px;
+                width:45px;
+                border-radius: 50%;
+                display:grid;
+                place-items:center;
+                color: #5f6368;
+                cursor:pointer;
+
+                :hover{
+                    background-color: rgba(60,64,67,0.08);
+                }
+            `
+
         const Logo = styled.div`
             height: 45px;
             display: flex;
+            align-items:center;
 
             img{
-                width: 95px;
+                height: 24px;
+                width:auto;
             }
         `
 
