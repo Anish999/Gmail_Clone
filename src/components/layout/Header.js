@@ -11,15 +11,18 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import AppsIcon from '@material-ui/icons/Apps';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
+import IconButton from '@material-ui/core/IconButton'
+
+
 function Header() {
     return (
         <Wrapper>
 
             <LogoWrapper>              
                 <Menu>
-                    <MenuIconWrapper>
+                    <IconButton>
                         <MenuIcon />
-                    </MenuIconWrapper>
+                    </IconButton>
                 </Menu>
                 <Logo>
                     <img src="https://logodownload.org/wp-content/uploads/2018/03/gmail-logo-1-1.png" />
@@ -28,21 +31,29 @@ function Header() {
 
             <SearchWrapper>
                 <SearchBarWrapper>
-                    <SearchIconWrapper>
+                    <IconButton>
                         <SearchIcon />
-                    </SearchIconWrapper>
+                    </IconButton>
                     <input type="text" placeholder="Search mail" />
-                    <ExpandMoreIconWrapper>
+                    <IconButton>
                         <ExpandMoreIcon />
-                    </ExpandMoreIconWrapper>
+                    </IconButton>
                 </SearchBarWrapper>
             </SearchWrapper>
 
             <IconsWrapper>
-                <HelpOutlineIcon />
-                <SettingsIcon />
-                <AppsIcon />
-                <AccountCircleIcon />
+                <IconButton>
+                    <HelpOutlineIcon />
+                </IconButton>
+                <IconButton>
+                    <SettingsIcon />
+                </IconButton>
+                <IconButton>
+                    <AppsIcon />
+                </IconButton>
+                <IconButton>
+                    <AccountCircleIcon />
+                </IconButton>
             </IconsWrapper>
 
         </Wrapper>
@@ -53,7 +64,7 @@ export default Header
 
 const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 270px auto 170px;
+    grid-template-columns: 270px auto 200px;
     border-bottom: 1px solid lightgray;
     height:64px;
     align-items: center;
@@ -69,20 +80,6 @@ const Wrapper = styled.div`
             display: grid;
             place-items: center;
         `
-
-        const MenuIconWrapper = styled.div`
-                height:45px;
-                width:45px;
-                border-radius: 50%;
-                display:grid;
-                place-items:center;
-                color: #5f6368;
-                cursor:pointer;
-
-                :hover{
-                    background-color: rgba(60,64,67,0.08);
-                }
-            `
 
         const Logo = styled.div`
             height: 45px;
@@ -126,30 +123,6 @@ const Wrapper = styled.div`
             }
         `
             
-            const SearchIconWrapper = styled.div`
-                height: 40px;
-                width: 40px;
-                display: grid;
-                place-items:center;
-                border-radius: 50%;
-
-                :hover {
-                    background-color: rgba(60,64,67,0.08);;
-                }
-            `
-
-            const ExpandMoreIconWrapper = styled.div`
-                height: 40px;
-                width: 40px;
-                display: grid;
-                place-items:center;
-                border-radius: 50%;
-
-                :hover {
-                    background-color: rgba(60,64,67,0.08);;
-                }
-            `
-
     const IconsWrapper = styled.div`
         margin-left: 8px;
         display: grid;
